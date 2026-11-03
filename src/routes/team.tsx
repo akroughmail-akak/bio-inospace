@@ -84,9 +84,17 @@ function TeamPage() {
                 </ContentCard>
               ) : (
                 <ContentCard key={member.name} className="flex items-start gap-4">
-                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-glow font-display text-base font-bold text-primary-foreground">
-                    {initials(member.name)}
-                  </span>
+                  {memberPhotos[member.name] ? (
+                    <img
+                      src={memberPhotos[member.name]}
+                      alt={member.name}
+                      className="h-14 w-14 shrink-0 rounded-full border-2 border-primary/15 object-cover object-top shadow-[var(--shadow-soft)]"
+                    />
+                  ) : (
+                    <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-glow font-display text-base font-bold text-primary-foreground">
+                      {initials(member.name)}
+                    </span>
+                  )}
                   <div className="min-w-0">
                     <h3 className="font-semibold leading-snug text-foreground">{member.name}</h3>
                     <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
