@@ -4,10 +4,35 @@ import { ContentCard, PageHero } from "@/components/shared";
 import { researchInterns, team } from "@/data/site";
 import manickamPhoto from "@/assets/manickam.jpg.asset.json";
 import suriyarajPhoto from "@/assets/suriyaraj.jpg.asset.json";
+import swathiPhoto from "@/assets/swathi.jpg.asset.json";
+import nagadharshiniPhoto from "@/assets/nagadharshini.jpg.asset.json";
+import sivakumaranPhoto from "@/assets/sivakumaran.jpg.asset.json";
+import jothiPhoto from "@/assets/jothi.jpg.asset.json";
+import kiruthikaPhoto from "@/assets/kiruthika.jpg.asset.json";
+import akshayPhoto from "@/assets/akshay.jpg.asset.json";
+import rathnadeepaPhoto from "@/assets/rathnadeepa.jpg.asset.json";
+import kameshwaranPhoto from "@/assets/kameshwaran.jpg.asset.json";
+import santhoshPhoto from "@/assets/santhosh.jpg.asset.json";
+import nisharaPhoto from "@/assets/nishara.jpg.asset.json";
+import asmithaPhoto from "@/assets/asmitha.jpg.asset.json";
 
 const memberPhotos: Record<string, string> = {
   "Dr. R. Manickam": manickamPhoto.url,
   "Dr. S. P. Suriyaraj": suriyarajPhoto.url,
+  "Ms. Swathi": swathiPhoto.url,
+  "Ms. Nagadharshini": nagadharshiniPhoto.url,
+  "Mr. Sivakumaran": sivakumaranPhoto.url,
+  "Ms. Jothi": jothiPhoto.url,
+};
+
+const internPhotos: Record<string, string> = {
+  "Ms. Kiruthika": kiruthikaPhoto.url,
+  "Mr. Akshay Kumaran": akshayPhoto.url,
+  "Ms. Rathnadeepa": rathnadeepaPhoto.url,
+  "Mr. Kameshwaran": kameshwaranPhoto.url,
+  "Mr. Santhosh": santhoshPhoto.url,
+  "Ms. Nishara": nisharaPhoto.url,
+  "Ms. Asmitha": asmithaPhoto.url,
 };
 
 function initials(name: string) {
@@ -59,9 +84,17 @@ function TeamPage() {
                 </ContentCard>
               ) : (
                 <ContentCard key={member.name} className="flex items-start gap-4">
-                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-glow font-display text-base font-bold text-primary-foreground">
-                    {initials(member.name)}
-                  </span>
+                  {memberPhotos[member.name] ? (
+                    <img
+                      src={memberPhotos[member.name]}
+                      alt={member.name}
+                      className="h-14 w-14 shrink-0 rounded-full border-2 border-primary/15 object-cover object-top shadow-[var(--shadow-soft)]"
+                    />
+                  ) : (
+                    <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-glow font-display text-base font-bold text-primary-foreground">
+                      {initials(member.name)}
+                    </span>
+                  )}
                   <div className="min-w-0">
                     <h3 className="font-semibold leading-snug text-foreground">{member.name}</h3>
                     <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
@@ -88,13 +121,21 @@ function TeamPage() {
           <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {researchInterns.map((intern) => (
               <ContentCard
-                key={intern}
+                key={intern.name}
                 className="flex items-center gap-4 !transition-transform hover:translate-y-0"
               >
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary text-primary">
-                  <UserRound className="h-5 w-5" aria-hidden />
-                </span>
-                <h3 className="font-medium text-foreground">{intern}</h3>
+                {internPhotos[intern.name] ? (
+                  <img
+                    src={internPhotos[intern.name]}
+                    alt={intern.name}
+                    className="h-12 w-12 shrink-0 rounded-full border-2 border-primary/15 object-cover object-top shadow-[var(--shadow-soft)]"
+                  />
+                ) : (
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary text-primary">
+                    <UserRound className="h-5 w-5" aria-hidden />
+                  </span>
+                )}
+                <h3 className="font-medium text-foreground">{intern.name}</h3>
               </ContentCard>
             ))}
           </div>

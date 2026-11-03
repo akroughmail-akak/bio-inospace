@@ -33,18 +33,21 @@ export const team = [
     ],
   },
   { name: "Ms. Swathi", role: "Project Manager" },
-  { name: "Ms. Nagadharshini R", role: "Junior Scientist" },
+  { name: "Ms. Nagadharshini", role: "Junior Scientist" },
   { name: "Mr. Sivakumaran", role: "Technical Assistant" },
   { name: "Ms. Jothi", role: "Finance and Accounts" },
 ] as { name: string; role: string; bio?: string[] }[];
 
-export const researchInterns = [
-  "Ms. Kiruthika",
-  "Mr. Niranjan C",
-  "Mr. Kameshwaran",
-  "Mr. Santhosh",
-  "Ms. Nishara",
-  "Ms. Asmitha",
+export type Intern = { name: string };
+
+export const researchInterns: Intern[] = [
+  { name: "Ms. Kiruthika" },
+  { name: "Mr. Akshay Kumaran" },
+  { name: "Ms. Rathnadeepa" },
+  { name: "Mr. Kameshwaran" },
+  { name: "Mr. Santhosh" },
+  { name: "Ms. Nishara" },
+  { name: "Ms. Asmitha" },
 ];
 
 export const focusAreas = [
@@ -128,5 +131,5 @@ export const stats = [
   { value: "32", label: "Startups incubated" },
   { value: "7", label: "Focus areas" },
   { value: "12", label: "Expert advisors" },
-  { value: "6", label: "Research interns" },
+  { value: "7", label: "Research interns" },
 ];
