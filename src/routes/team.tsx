@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { FlaskConical } from "lucide-react";
+import { FlaskConical, UserRound } from "lucide-react";
 import { ContentCard, PageHero } from "@/components/shared";
 import { researchInterns, team } from "@/data/site";
 import manickamPhoto from "@/assets/manickam.jpg.asset.json";
