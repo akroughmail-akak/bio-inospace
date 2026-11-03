@@ -40,8 +40,8 @@
   --color-ring: var(--ring);
   --color-hero-wash: var(--hero-wash);
   --color-surface-tint: var(--surface-tint);
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  --font-body: Arial, "Helvetica Neue", Helvetica, sans-serif;
   --shadow-soft: 0 1px 2px oklch(0.3 0.05 180 / 0.05), 0 8px 24px -12px oklch(0.35 0.06 180 / 0.14);
   --shadow-lift: 0 2px 4px oklch(0.3 0.05 180 / 0.06), 0 16px 40px -16px oklch(0.35 0.06 180 / 0.2);
   --gradient-hero: linear-gradient(135deg, var(--primary) 0%, var(--primary-glow) 100%);
