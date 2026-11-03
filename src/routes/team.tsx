@@ -2,6 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { FlaskConical, UserRound } from "lucide-react";
 import { ContentCard, PageHero } from "@/components/shared";
 import { researchInterns, team } from "@/data/site";
+import manickamPhoto from "@/assets/manickam.jpg.asset.json";
+import suriyarajPhoto from "@/assets/suriyaraj.jpg.asset.json";
+
+const memberPhotos: Record<string, string> = {
+  "Dr. R. Manickam": manickamPhoto.url,
+  "Dr. S. P. Suriyaraj": suriyarajPhoto.url,
+};
 
 function initials(name: string) {
   const cleaned = name.replace(/^(Dr\.|Ms\.|Mr\.)\s*/i, "").trim();
