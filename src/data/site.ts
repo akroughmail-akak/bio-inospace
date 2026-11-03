@@ -15,16 +15,28 @@ export const org = {
 };
 
 export const team = [
-  { name: "Dr. R. Manickam", role: "CEO of Rathinam Group" },
+  {
+    name: "Dr. R. Manickam",
+    role: "CEO of Rathinam Group",
+    bio: [
+      "Dr. Manickam Ramasamy, Chief Executive Officer and Secretary of Rathinam Group of Institutions, Coimbatore, is a seasoned education leader with over 22 years of expertise in higher education and strategic development. He has spearheaded the establishment of new institutions in diverse fields, launched industry-aligned programs, and enhanced student employability. A dedicated academician and researcher, he continues to drive Rathinam's growth, brand expansion, and global recognition by blending academic rigor with innovation and collaboration.",
+    ],
+  },
   {
     name: "Dr. S. P. Suriyaraj",
     role: "Dean - School of Applied Biosciences, Rathinam Global Deemed to be University",
+    bio: [
+      "Dr. S. P. Suriyaraj holds a Master of Science in Nanoscience and Technology from Bharathiar University and a PhD in Nanobiotechnology from PSG Institute of Advanced Studies, Coimbatore. He further honred his expertise as a Post-Doctoral Fellow at the Department of Biotechnology, Indian Institute of Technology Madras.",
+      "With over 12 years of experience in research, innovation, and incubation in the field of nanobiotechnology, his interests focus on bioremediation, environmental applications, and drug delivery systems. Dr. Suriyaraj has an impressive portfolio of more than 20 scientific publications, including original research papers, review articles, and book chapters, along with three patents. He has also mentored numerous bio-nano startups and innovators.",
+      "His industrial experience spans over three years as Chief Technology Officer and Senior Scientist at Ardor Biomed India Pvt Ltd, Coimbatore, where he developed various medical devices and products through government funding and grants. Currently, he serves as a Associate Vice President at AIC Raise, an initiative supported by Atal Innovation Mission, NITI Aayog, Government of India.",
+      "Passionate about fostering technology startups and nurturing budding entrepreneurs, Dr. Suriyaraj continues to make significant contributions to the field of nanobiotechnology.",
+    ],
   },
   { name: "Ms. Swathi", role: "Project Manager" },
   { name: "Ms. Nagadharshini R", role: "Junior Scientist" },
   { name: "Mr. Sivakumaran", role: "Technical Assistant" },
   { name: "Ms. Jothi", role: "Finance and Accounts" },
-];
+] as { name: string; role: string; bio?: string[] }[];
 
 export const researchInterns = [
   "Ms. Kiruthika",
