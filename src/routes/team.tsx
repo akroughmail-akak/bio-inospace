@@ -29,19 +29,48 @@ function TeamPage() {
         <div className="container-site">
           <h2 className="text-2xl font-semibold text-foreground md:text-3xl">Core team</h2>
           <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {team.map((member) => (
-              <ContentCard key={member.name} className="flex items-start gap-4">
-                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-glow font-display text-base font-bold text-primary-foreground">
-                  {initials(member.name)}
-                </span>
-                <div className="min-w-0">
-                  <h3 className="font-semibold leading-snug text-foreground">{member.name}</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    {member.role}
-                  </p>
-                </div>
-              </ContentCard>
-            ))}
+            {team.map((member) =>
+              memberPhotos[member.name] ? (
+                <ContentCard
+                  key={member.name}
+                  className="sm:col-span-2 lg:col-span-3 flex flex-col gap-6 !transition-transform hover:translate-y-0 md:flex-row md:items-start"
+                >
+                  <img
+                    src={memberPhotos[member.name]}
+                    alt={member.name}
+                    className="h-56 w-44 shrink-0 rounded-xl object-cover object-top shadow-[var(--shadow-soft)] md:h-64 md:w-52"
+                  />
+                  <div className="min-w-0">
+                    <h3 className="text-2xl font-bold leading-tight text-primary md:text-3xl">
+                      {member.name}
+                    </h3>
+                    <p className="mt-2 text-base font-semibold text-foreground">{member.role}</p>
+                    <div className="mt-4 space-y-4 border-t border-border pt-4">
+                      {(member.bio ?? []).map((paragraph) => (
+                        <p
+                          key={paragraph.slice(0, 24)}
+                          className="text-sm leading-relaxed text-muted-foreground md:text-base"
+                        >
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </ContentCard>
+              ) : (
+                <ContentCard key={member.name} className="flex items-start gap-4">
+                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-glow font-display text-base font-bold text-primary-foreground">
+                    {initials(member.name)}
+                  </span>
+                  <div className="min-w-0">
+                    <h3 className="font-semibold leading-snug text-foreground">{member.name}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                      {member.role}
+                    </p>
+                  </div>
+                </ContentCard>
+              )
+            )}
           </div>
         </div>
       </section>
