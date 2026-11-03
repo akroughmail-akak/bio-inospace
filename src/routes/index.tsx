@@ -41,7 +41,7 @@ function Index() {
           className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/45 to-background/15"
         />
         <div className="container-site relative py-16 md:py-24">
-          <div className="max-w-2xl rounded-3xl bg-background/70 p-6 backdrop-blur-sm md:p-8">
+          <div className="max-w-2xl">
             <span className="eyebrow">RGU × AIC RAISE Initiative</span>
             <h1 className="mt-5 text-4xl font-bold text-balance-tight text-foreground sm:text-5xl md:text-6xl">
               Bio Innospace
