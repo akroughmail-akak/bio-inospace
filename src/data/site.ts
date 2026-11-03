@@ -131,5 +131,5 @@ export const stats = [
   { value: "32", label: "Startups incubated" },
   { value: "7", label: "Focus areas" },
   { value: "12", label: "Expert advisors" },
-  { value: "6", label: "Research interns" },
+  { value: "7", label: "Research interns" },
 ];
