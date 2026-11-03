@@ -1,13 +1,38 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { FlaskConical, UserRound } from "lucide-react";
+import { FlaskConical } from "lucide-react";
 import { ContentCard, PageHero } from "@/components/shared";
 import { researchInterns, team } from "@/data/site";
 import manickamPhoto from "@/assets/manickam.jpg.asset.json";
 import suriyarajPhoto from "@/assets/suriyaraj.jpg.asset.json";
+import swathiPhoto from "@/assets/swathi.jpg.asset.json";
+import nagadharshiniPhoto from "@/assets/nagadharshini.jpg.asset.json";
+import sivakumaranPhoto from "@/assets/sivakumaran.jpg.asset.json";
+import jothiPhoto from "@/assets/jothi.jpg.asset.json";
+import kiruthikaPhoto from "@/assets/kiruthika.jpg.asset.json";
+import akshayPhoto from "@/assets/akshay.jpg.asset.json";
+import rathnadeepaPhoto from "@/assets/rathnadeepa.jpg.asset.json";
+import kameshwaranPhoto from "@/assets/kameshwaran.jpg.asset.json";
+import santhoshPhoto from "@/assets/santhosh.jpg.asset.json";
+import nisharaPhoto from "@/assets/nishara.jpg.asset.json";
+import asmithaPhoto from "@/assets/asmitha.jpg.asset.json";
 
 const memberPhotos: Record<string, string> = {
   "Dr. R. Manickam": manickamPhoto.url,
   "Dr. S. P. Suriyaraj": suriyarajPhoto.url,
+  "Ms. Swathi": swathiPhoto.url,
+  "Ms. Nagadharshini": nagadharshiniPhoto.url,
+  "Mr. Sivakumaran": sivakumaranPhoto.url,
+  "Ms. Jothi": jothiPhoto.url,
+};
+
+const internPhotos: Record<string, string> = {
+  "Ms. Kiruthika": kiruthikaPhoto.url,
+  "Mr. Akshay Kumaran": akshayPhoto.url,
+  "Ms. Rathnadeepa": rathnadeepaPhoto.url,
+  "Mr. Kameshwaran": kameshwaranPhoto.url,
+  "Mr. Santhosh": santhoshPhoto.url,
+  "Ms. Nishara": nisharaPhoto.url,
+  "Ms. Asmitha": asmithaPhoto.url,
 };
 
 function initials(name: string) {
